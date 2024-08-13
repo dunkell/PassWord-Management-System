@@ -1,8 +1,10 @@
 from flask import Flask
+from flask_cors import CORS
 import os
 import sqlite3
 
 app = Flask(__name__)
+CORS(app)
 
 # 配置 SQLite 数据库
 app.config['DATABASE'] = os.path.join(os.getcwd(), 'app', 'database.db')
